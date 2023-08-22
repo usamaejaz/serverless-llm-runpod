@@ -1,0 +1,7 @@
+{
+    "input": {
+        "prompt": "Write a story about two newly wed couple.",
+        "max_length": 250,
+        "temperature": 0.7
+    }
+}
