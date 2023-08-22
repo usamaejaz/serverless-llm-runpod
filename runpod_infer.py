@@ -95,9 +95,9 @@ parser.add_argument("--model_name", type=str,
 if __name__ == "__main__":
     args = parser.parse_args()
 
-    model = AutoModelForCausalLM.from_pretrained(model_name,
+    model = AutoModelForCausalLM.from_pretrained(args.model_name,
                                                  trust_remote_code=True, local_files_only=True).to(device)
     tokenizer = AutoTokenizer.from_pretrained(
-        model_name, local_files_only=True)
+        args.model_name, local_files_only=True)
 
     runpod.serverless.start({"handler": generator})
